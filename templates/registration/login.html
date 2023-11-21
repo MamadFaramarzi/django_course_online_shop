@@ -1,7 +1,19 @@
-<h1>Log In</h1>
+{% extends '_base.html' %}
 
-<form action="" method="post">
-      {% csrf_token %}
-     {{ form.as_p }}
-    <input type="submit" value="Log In">
-</form>
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block page_title %} Log In {% endblock page_title %}
+
+{% block content %}
+    <h1>Log In</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+       {{ form.as_p}}
+        <input type="submit" value="Log In">
+    </form>
+
+    <a href="{% url "logout" %}" class="button"> Log Out</a> |
+    <a href="{% url "signup" %}" class="button"> Sign Up</a>
+{% endblock content %}
