@@ -1,0 +1,17 @@
+{% extends "_base.html" %}
+
+{%block page_title%} Products {%endblock page_title%}
+
+{% block content%}
+<h1>Product List</h1>
+
+<h5>
+    نام محصول: {{ product.title }}
+    <br>
+    توضیحات: {{ product.description }}
+    <br>
+    قیمت: {{ product.price }}
+</h3>
+
+
+{% endblock content %}
