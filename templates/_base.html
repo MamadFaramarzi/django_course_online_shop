@@ -52,14 +52,14 @@
                                 <div class="site-branding" style="margin-right: 30px;">
                                     <a href="{% url "home" %}" class="logo">
                                         <figure class="logo--normal d-none d-sm-block">
-                                            <img class="px-5" src="assets/img/codingyar_logo.png" style="max-height: 50px; margin-bottom: -15px;" alt="Logo">
+                                            <img class="px-5" src="{% static "img/onlineshop.png" %}" style="max-height: 50px; margin-bottom: -15px;" alt="Logo">
                                         </figure>
                                     </a>
                                 </div>
                                 <div class="mainmenu-nav d-none d-lg-block w-100 pr-3">
                                     <ul class="mainmenu d-lg-flex jusity-content-end jusity-content-lg-start pt-4">
                                         <li class="mainmenu__item menu-item-has-children active">
-                                            <a href="{% url "home" %}" class="mainmenu__link">
+                                            <a href="{% url "product_list" %}" class="mainmenu__link">
                                                 <span class="mm-text">خانه</span>
                                             </a>
                                         </li>
@@ -152,6 +152,35 @@
 {##}
 {#    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>#}
 {#    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>#}
+
+
+<!-- Footer Start-->
+  <footer class="footer">
+            <div class="footer-top bg-color ptb--50" data-bg-color="#f6f6f6">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9 text-center">
+                            <div class="footer-widget mb--50">
+                                <div class="textwidget">
+                                    <img src="{% static "img/onlineshop.png" %}" alt="Logo">
+                                </div>
+                            </div>
+                            <div class="footer-widget mb--50 pb--1">
+                                <ul class="footer-menu">
+                                    <li><a href="">درباره ما</a></li>
+                                    <li><a href="">قوانین و مقررات</a></li>
+                                    <li><a href="">تماس با ما</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-widget">
+                                Codingyar.com © | all rights reserved
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!-- Footer End-->
 
 </body>
 </html>
