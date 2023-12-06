@@ -1,0 +1,4 @@
+BBBB BBBB
+BBBBBBBBBB BBB
+ gettext(u'please confirm your email addres ') SSSSSS SSSSSSS SSSS SSSSS SSSSSS 
+BBBBBBBBBBBBB
