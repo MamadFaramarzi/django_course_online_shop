@@ -1,8 +1,19 @@
-from django.shortcuts import render, get_object_or_404 ,reverse
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
+from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
 
 from .models import Product, Comment
 from .forms import CommentForm
+
+
+def test_messages(request):
+    result = _('hello mamad')
+    messages.success(request, 'welcome')
+    messages.warning(request, 'watch your account')
+    messages.error(request, 'error 207i')
+    return render(request, 'products/test_message.html')
+
 
 class ProductListView(generic.ListView):
     queryset = Product.objects.filter(active=True)

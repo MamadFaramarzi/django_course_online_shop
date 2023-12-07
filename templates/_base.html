@@ -132,6 +132,19 @@
         </header>
 <!-- Header End -->
 
+<!-- Messages start-->
+{% if messages %}
+<ul class="container">
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" >
+        {{ message }}
+        </div>
+    {% endfor %}
+</ul>
+{% endif %}
+<!-- Messages End -->
+
+
   {% block content %}
   {% endblock content %}
     <!-- ************************* JS Files ************************* -->
