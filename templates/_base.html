@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+
 <!doctype html >
 <html lang="en">
   <head>
@@ -92,7 +94,7 @@
                                 <li class="header-toolbar__item mini-cart-item">
                                     <a href="#miniCart" class="header-toolbar__btn toolbar-btn mini-cart-btn">
                                         <i class="flaticon flaticon-shopping-cart"></i>
-                                        <sup class="mini-cart-count">2</sup>
+                                        <sup class="mini-cart-count">{{ cart|length }}</sup>
                                     </a>
                                 </li>
                                 <li class="header-toolbar__item user-info">
@@ -100,11 +102,20 @@
                                         <i class="flaticon flaticon-user"></i>
                                     </a>
                                     <ul class="user-info-menu">
+                                        {% if user.is_authenticated %}
                                         <li>
-                                            <a class="text-right" href="my-account.html">حساب کاربری</a>
+                                            <a class="text-right" href="my-account.html">{% trans "Profile" %}</a>
                                         </li>
                                         <li>
-                                            <a class="text-right" href="cart.html">سبد خرید</a>
+                                            <a class="text-right" href="{% url 'account_logout' %}">{% translate 'Logout' %}</a>
+                                        </li>
+
+                                            {% else %}
+                                        <li>
+                                            <a class="text-right" href="{% url 'account_login' %}">{% trans 'Login' %}</a>
+                                        </li>
+                                        <li>
+                                            <a class="text-right" href="{% url 'account_signup' %}">{% trans 'Signup' %}</a>
                                         </li>
                                         <li>
                                             <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
@@ -112,6 +123,7 @@
                                         <li>
                                             <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
                                         </li>
+                                            {% endif %}
                                     </ul>
                                 </li>
                                 <li class="header-toolbar__item">
@@ -137,12 +149,37 @@
 <ul class="container">
     {% for message in messages %}
         <div class="alert alert-{{ message.tags }}" >
-        {{ message }}
+            {{ message }}
         </div>
     {% endfor %}
 </ul>
+    <!-- Disappear -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const alertMessages = document.querySelectorAll('.alert');
+
+    alertMessages.forEach(function(alert) {
+      setTimeout(function() {
+        fadeOut(alert);
+      }, 5000); // Change 5000 to the desired delay time in milliseconds
+    });
+
+    function fadeOut(element) {
+      let opacity = 1;
+      const timer = setInterval(function() {
+        if (opacity <= 0.1) {
+          clearInterval(timer);
+          element.style.display = 'none';
+        }
+        element.style.opacity = opacity;
+        opacity -= 0.1;
+      }, 50); // Adjust the speed of fade-out by changing the interval time
+    }
+  });
+</script>
 {% endif %}
 <!-- Messages End -->
+
 
 
   {% block content %}
@@ -154,6 +191,8 @@
 
     <!-- Main JS -->
     <script src="{% static "js/main.js" %}"></script>
+
+
 
 
 

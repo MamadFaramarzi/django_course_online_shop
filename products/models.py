@@ -20,9 +20,11 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('product_detail', args=[self.id])
 
+
 class ActiveCommentsManager(models.Manager):
     def get_queryset(self):
         return super(ActiveCommentsManager, self).get_queryset().filter(active=True)
+
 
 class Comment(models.Model):
     PRODUCT_CHOICES = [

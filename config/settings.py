@@ -15,14 +15,12 @@ from pathlib import Path
 from environs import Env
 import os
 
-
 # for environment variables
 env = Env()
 env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -35,7 +33,6 @@ DEBUG = env.bool('DJANGO_DEBUG')
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.herokuapp.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,16 +43,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # local apps
+    'accounts',
+    "pages",
+    'products.apps.ProductsConfig',
+    'cart.apps.CartConfig',
+
     # third party apps
     'rosetta',
     'crispy_forms',
     'allauth',
     'allauth.account',
 
-    #local apps
-    'accounts',
-    "pages",
-    'products.apps.ProductsConfig',
 ]
 
 SITE_ID = 1
@@ -68,7 +67,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "allauth.account.middleware.AccountMiddleware", # remove this, which only used in v0.56+
+    "allauth.account.middleware.AccountMiddleware",  # remove this, which only used in v0.56+
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -84,13 +83,14 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # Custom context processors
+                'cart.context_processors.cart',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -107,7 +107,6 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -127,7 +126,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 AUTHENTICATION_BACKENDS = [
 
     'django.contrib.auth.backends.ModelBackend',
@@ -141,11 +139,6 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'mohammadfaramarzi.f78@gmail.com'
 EMAIL_HOST_PASSWORD = "tdsx viic nlyz jwbk"
-
-
-
-
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
@@ -163,7 +156,6 @@ TIME_ZONE = 'Asia/Tehran'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
