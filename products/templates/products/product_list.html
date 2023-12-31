@@ -2,6 +2,9 @@
 
 {%block page_title%} Products {%endblock page_title%}
 
+{% load i18n %}
+{% load persian_translations_tags %}
+{% load humanize %}
 {% block content%}
 
 
@@ -66,7 +69,9 @@
                                                             <a href="{{ product.get_absolute_url }}">{{ product.title}}</a>
                                                         </h3>
                                                         <div class="product-price-wrapper mb--30">
-                                                            <span class="money text-success">{{product.price}} تومان</span>
+                                                            <span class="money text-success">
+                                                                {{product.price|translate_number|intcomma:False}} {% translate '$' %}
+                                                            </span>
                                                             <span class="money-separator">-</span>
                                                             <span class="old-price text-danger">
                                                                 <span class="money text-danger">۸۰,۰۰۰ تومان</span>
