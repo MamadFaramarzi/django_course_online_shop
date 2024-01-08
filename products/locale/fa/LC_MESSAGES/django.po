@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-25 12:50+0330\n"
-"PO-Revision-Date: 2023-12-25 12:50+0330\n"
+"POT-Creation-Date: 2024-01-08 20:49+0330\n"
+"PO-Revision-Date: 2024-01-08 20:50+0330\n"
 "Last-Translator:   <mamad@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,83 +18,117 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\models.py:14
-msgid "product image"
+#: .\models.py:12
+msgid "product title"
 msgstr "عکس محصول"
 
-#: .\models.py:16
-msgid "date time of creation"
-msgstr "تاریخ انتشار"
-
-#: .\models.py:33
-msgid "Very Bad"
-msgstr "خیلی بد"
-
-#: .\models.py:34
-msgid "Bad"
-msgstr "بد"
-
-#: .\models.py:35
-msgid "Normal"
-msgstr "متوسط"
-
-#: .\models.py:36
-msgid "Good"
-msgstr "خوب"
-
-#: .\models.py:37
-msgid "Perfect"
-msgstr "عالی"
-
-#: .\models.py:41
-msgid "Comment Author"
-msgstr "نویسنده"
-
-#: .\models.py:42
-msgid "Comment Text"
-msgstr "متن دیدگاه"
-
-#: .\models.py:43
-msgid "Your Score"
-msgstr "امتیاز شما به این محصول"
-
-#: .\templates\products\product_detail.html:22
-msgid "product details of"
-msgstr "توضیحات محصول"
-
-#: .\templates\products\product_detail.html:49
-msgid "$"
-msgstr "تومان"
-
-#: .\templates\products\product_detail.html:64
-msgid "add to cart"
-msgstr "اضافه به سبد خرید"
-
-#: .\templates\products\product_detail.html:78
-msgid "Categories"
-msgstr "دسته بندی ها"
-
-#: .\templates\products\product_detail.html:94
+#: .\models.py:13 .\templates\products\product_detail.html:98
 msgid "product description"
 msgstr "توضیحات محصول"
 
-#: .\templates\products\product_detail.html:179
+#: .\models.py:14
+msgid "short description"
+msgstr "درباره ی محصول"
+
+#: .\models.py:15
+msgid "price"
+msgstr "قیمت"
+
+#: .\models.py:16
+msgid "product active"
+msgstr "موجود"
+
+#: .\models.py:17
+msgid "product image"
+msgstr "عکس محصول"
+
+#: .\models.py:19
+msgid "date time of creation"
+msgstr "تاریخ انتشار"
+
+#: .\models.py:20
+msgid "date time of last edit"
+msgstr "تاریخ آخرین تغییر"
+
+#: .\models.py:36
+msgid "Very Bad"
+msgstr "خیلی بد"
+
+#: .\models.py:37
+msgid "Bad"
+msgstr "بد"
+
+#: .\models.py:38
+msgid "Normal"
+msgstr "متوسط"
+
+#: .\models.py:39
+msgid "Good"
+msgstr "خوب"
+
+#: .\models.py:40
+msgid "Perfect"
+msgstr "عالی"
+
+#: .\models.py:42
+#| msgid "product title"
+msgid "product"
+msgstr "محصول"
+
+#: .\models.py:44
+msgid "Comment Author"
+msgstr "نویسنده"
+
+#: .\models.py:45
+msgid "Comment Text"
+msgstr "متن دیدگاه"
+
+#: .\models.py:46
+msgid "Your Score"
+msgstr "امتیاز شما به این محصول"
+
+#: .\models.py:48
+#, fuzzy
+#| msgid "date time of creation"
+msgid "date time of comment creation"
+msgstr "تاریخ انتشار"
+
+#: .\models.py:51
+msgid "valid"
+msgstr "معتبر"
+
+#: .\templates\products\product_detail.html:26
+msgid "product details of"
+msgstr "توضیحات محصول"
+
+#: .\templates\products\product_detail.html:53
+#: .\templates\products\product_list.html:73
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\products\product_detail.html:68
+msgid "add to cart"
+msgstr "اضافه به سبد خرید"
+
+#: .\templates\products\product_detail.html:82
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: .\templates\products\product_detail.html:183
 msgid "write your comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\products\product_detail.html:187
+#: .\templates\products\product_detail.html:191
 msgid "send"
 msgstr "ارسال"
 
-#: .\templates\products\product_detail.html:191
-#, fuzzy
-#| msgid "write your comment"
+#: .\templates\products\product_detail.html:195
 msgid "to submit your comment "
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\products\product_detail.html:192
+#: .\templates\products\product_detail.html:196
 msgid "Login"
-msgstr ""
+msgstr "ورود به حساب کاربری"
 
 #: .\views.py:12
 msgid "hello mamad"
