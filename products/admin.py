@@ -3,6 +3,7 @@ from jalali_date.admin import ModelAdminJalaliMixin, StackedInlineJalaliMixin, T
 
 from .models import Product, Comment
 
+
 class CommentInline(admin.TabularInline):
     model = Comment
     fields = ['author', 'stars', "body", "active"]
@@ -15,6 +16,7 @@ class ProductAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
     inlines = [
         CommentInline,
     ]
+
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):

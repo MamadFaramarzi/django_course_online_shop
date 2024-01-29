@@ -12,7 +12,9 @@
 
 {% block content %}
 
-{% include 'topheader.html' with header_name='Cart' %}
+    {% translate 'Cart' as header_name %}
+    {% include 'topheader.html' with header_name='Cart' %}
+
     <!-- Main Wrapper Start -->
     <div class="wrapper">
 
@@ -141,7 +143,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="checkout.html"
+                                <a href="{% url 'order_create' %}"
                                    class="btn btn-fullwidth btn-bg-red btn-color-white btn-hover-2">
                                     ثبت سفارش
                                 </a>

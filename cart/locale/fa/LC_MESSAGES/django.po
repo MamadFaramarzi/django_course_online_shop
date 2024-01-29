@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-08 20:54+0330\n"
-"PO-Revision-Date: 2024-01-08 20:55+0330\n"
+"PO-Revision-Date: 2024-01-08 21:08+0330\n"
 "Last-Translator:   <mamad@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "برو به سبد خرید"
 
 #: .\templates\cart\cart_sidebar.html:42
 msgid "Checkout"
-msgstr "پرداخت"
+msgstr "ثبت سفارش"
 
 #~ msgid "Update"
 #~ msgstr "ویرایش"

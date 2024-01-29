@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
     'persian_translate',
+    'orders.apps.OrdersConfig',
 
     # third party apps
     'rosetta',
