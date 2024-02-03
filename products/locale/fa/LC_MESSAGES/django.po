@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-08 20:49+0330\n"
-"PO-Revision-Date: 2024-01-08 20:50+0330\n"
+"POT-Creation-Date: 2024-02-02 20:40+0330\n"
+"PO-Revision-Date: 2024-02-02 20:41+0330\n"
 "Last-Translator:   <mamad@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -71,7 +71,6 @@ msgid "Perfect"
 msgstr "عالی"
 
 #: .\models.py:42
-#| msgid "product title"
 msgid "product"
 msgstr "محصول"
 
@@ -88,10 +87,8 @@ msgid "Your Score"
 msgstr "امتیاز شما به این محصول"
 
 #: .\models.py:48
-#, fuzzy
-#| msgid "date time of creation"
 msgid "date time of comment creation"
-msgstr "تاریخ انتشار"
+msgstr "تاریخ ثبت نظر"
 
 #: .\models.py:51
 msgid "valid"
@@ -129,6 +126,11 @@ msgstr "نظر خود را بنویسید"
 #: .\templates\products\product_detail.html:196
 msgid "Login"
 msgstr "ورود به حساب کاربری"
+
+#: .\templates\products\product_list.html:87
+#| msgid "add to cart"
+msgid "Add to cart"
+msgstr "اضافه کردن به سبد خرید"
 
 #: .\views.py:12
 msgid "hello mamad"

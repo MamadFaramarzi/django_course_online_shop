@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-27 13:16+0330\n"
-"PO-Revision-Date: 2024-01-28 23:13+0330\n"
+"POT-Creation-Date: 2024-02-02 18:50+0330\n"
+"PO-Revision-Date: 2024-02-02 18:59+0330\n"
 "Last-Translator:   <mamad@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -40,20 +40,33 @@ msgstr "توضیحات سفارش"
 
 #: .\models.py:16
 msgid "date time of creation"
-msgstr ""
+msgstr "تاریخ ثبت محصول"
 
 #: .\models.py:17
 msgid "date time of last edit"
-msgstr ""
+msgstr "تاریخ ویرایش"
 
 #: .\models.py:26
 msgid "quantity"
 msgstr "تعداد"
 
-#: .\models.py:27
+#: .\models.py:27 .\templates\orders\order_create.html:111
+#: .\templates\orders\order_create.html:119
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\orders\order_create.html:34
+#: .\templates\orders\order_create.html:35
 msgid "Order"
-msgstr "سفارش"
+msgstr "ثبت سفارش"
+
+#: .\templates\orders\order_create.html:86
+msgid "send"
+msgstr "پرداخت"
+
+#: .\views.py:17
+msgid "you can not proceed to checkout because your cart is Empty"
+msgstr "شما نمیتوانید به صفحه پرداخت بروید، زیرا سبد خرید شما خالی است"
+
+#: .\views.py:43
+msgid "your order has successfully placed "
+msgstr "سفارش شما با موفقیت ثبت شد"

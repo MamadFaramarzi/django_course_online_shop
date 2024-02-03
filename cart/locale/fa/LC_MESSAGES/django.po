@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-08 20:54+0330\n"
-"PO-Revision-Date: 2024-01-08 21:08+0330\n"
+"POT-Creation-Date: 2024-02-02 18:50+0330\n"
+"PO-Revision-Date: 2024-02-02 18:57+0330\n"
 "Last-Translator:   <mamad@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,36 +26,46 @@ msgstr "محصول شما به سبد خرید اضافه شد"
 msgid "Product successfully removed from cart"
 msgstr "محصول با موفقیت از سبد خرید حذف شد"
 
-#: .\templates\cart\cart_detail.html:74 .\templates\cart\cart_detail.html:99
-#: .\templates\cart\cart_sidebar.html:30 .\templates\cart\cart_sidebar.html:38
-msgid "$"
-msgstr "تومان"
-
-#: .\templates\cart\cart_detail.html:108
-msgid "Cart is Empty! Please add some products to the cart"
-msgstr "سبد خرید شما خالی است، لطفا تعدادی محصول به سبد خرید اضافه کنید"
-
-#: .\templates\cart\cart_detail.html:109
-msgid "Go Shopping"
-msgstr "رفتن به فروشگاه"
-
-#: .\templates\cart\cart_sidebar.html:12
+#: .\templates\cart\cart_detail.html:15 .\templates\cart\cart_sidebar.html:14
 msgid "Cart"
 msgstr "سبد خرید"
 
-#: .\templates\cart\cart_sidebar.html:37
-#, fuzzy
-#| msgid "price"
-msgid "Total price"
+#: .\templates\cart\cart_detail.html:76 .\templates\cart\cart_detail.html:101
+#: .\templates\cart\cart_sidebar.html:32 .\templates\cart\cart_sidebar.html:40
+msgid "$"
 msgstr "تومان"
 
-#: .\templates\cart\cart_sidebar.html:41
+#: .\templates\cart\cart_detail.html:110
+msgid "Cart is Empty! Please add some products to the cart"
+msgstr "سبد خرید شما خالی است، لطفا تعدادی محصول به سبد خرید اضافه کنید"
+
+#: .\templates\cart\cart_detail.html:111
+msgid "Go Shopping"
+msgstr "رفتن به فروشگاه"
+
+#: .\templates\cart\cart_detail.html:121
+msgid "clear cart"
+msgstr "خالی کردن سبد خرید"
+
+#: .\templates\cart\cart_detail.html:156 .\templates\cart\cart_sidebar.html:44
+msgid "Checkout"
+msgstr "ثبت سفارش"
+
+#: .\templates\cart\cart_sidebar.html:39
+msgid "Total price"
+msgstr "قیمت کل"
+
+#: .\templates\cart\cart_sidebar.html:43
 msgid "Go to cart"
 msgstr "برو به سبد خرید"
 
-#: .\templates\cart\cart_sidebar.html:42
-msgid "Checkout"
-msgstr "ثبت سفارش"
+#: .\views.py:55
+msgid "All products successfully removed from cart"
+msgstr "سبد خرید شما با موفقیت خالی شد"
+
+#: .\views.py:57
+msgid "Your cart is already empty"
+msgstr "سبد خرید شما خالی است"
 
 #~ msgid "Update"
 #~ msgstr "ویرایش"
