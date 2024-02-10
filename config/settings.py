@@ -17,6 +17,8 @@ from django.template.context_processors import media
 from environs import Env
 import os
 
+import payment.apps
+
 # for environment variables
 env = Env()
 env.read_env()
@@ -53,6 +55,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'persian_translate',
     'orders.apps.OrdersConfig',
+    'payment',
 
     # third party apps
     'rosetta',
@@ -200,3 +203,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+ZARINPAL_MERCHANT_ID = env('DJANGO_ZARINPAL_MERCHANT_ID')

@@ -20,7 +20,6 @@ def order_create_view(request):
     if request.method == 'POST':
         order_form = OrderForm(request.POST, )
 
-
         if order_form.is_valid():
             order_obj = order_form.save(commit=False)
             order_obj.user = request.user
@@ -36,11 +35,12 @@ def order_create_view(request):
                 )
             cart.clear()
 
-            request.user.firstname = order_obj.firtname
+            request.user.firstname = order_obj.firstname
             request.user.lastname = order_obj.lastname
             request.user.save()
 
-            messages.success(request, _('your order has successfully placed '))
+            request.session['order_id'] = order_obj.id
+            return redirect('payment:payment_process')
 
     return render(request, 'orders/order_create.html', {
         'form': order_form,
